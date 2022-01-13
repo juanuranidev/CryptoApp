@@ -1,0 +1,26 @@
+@import '../../styles/base';
+
+.coin{
+    text-align: center;
+    td{
+        padding: 0.5rem 0rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        .symbol{
+            opacity: 0.6;
+            padding-left: 0.2rem;
+        }
+        .arrow{
+            padding-right: 0.2rem;
+        }
+    }
+    .profit{
+        color: green;
+    }
+    .loss{
+        color: red;
+    }
+}
+.coin:hover{
+    background-color: #f8fafd;
+}

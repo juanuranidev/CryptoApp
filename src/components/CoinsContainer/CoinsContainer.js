@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import Coin from './Coin/Coin'
+import Coin from '../Coin/Coin'
+import './_CoinsContainer.scss'
 
 const CoinsContainer = () => {
     const [data, setData] = useState([])
@@ -16,15 +17,13 @@ const CoinsContainer = () => {
 
 
     return (
-        <>
+        <section className='coinsSection'>
             <table>
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Symbol</th>
                         <th>Price USD</th>
-                        <th>Price BTC</th>
                         <th>24h %</th>
                         <th>7d %</th>
                         <th>Marketcap USD</th>
@@ -35,8 +34,7 @@ const CoinsContainer = () => {
                     <Coin data={data} />
                 </tbody>
             </table>
-            
-        </>
+        </section>
     )
 }
 
