@@ -1,8 +1,10 @@
 @import '../../styles/base';
 
-.coin{
-    text-align: center;
+tr{
+    border: none;
+    border-bottom: 1px solid black;
     td{
+        border: none;
         padding: 0.5rem 0rem;
         font-size: 0.8rem;
         font-weight: 500;
@@ -21,6 +23,6 @@
         color: red;
     }
 }
-.coin:hover{
+tr:hover{
     background-color: #f8fafd;
 }
