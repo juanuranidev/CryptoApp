@@ -7,7 +7,6 @@ import './_CoinsContainer.scss'
 const CoinsContainer = () => {
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true)
-    console.log(loader)
 
     useEffect(() => {
         fetch("https://api.coinlore.net/api/tickers/")
@@ -15,6 +14,7 @@ const CoinsContainer = () => {
         .then(data => setData(data.data))
         .finally(() => setLoader(false))
     }, [])
+    console.log(data)
 
     return (
         <section className='coinsSection'>
@@ -23,11 +23,12 @@ const CoinsContainer = () => {
                     <tr>
                         <th>#</th>
                         <th>Name</th>
-                        <th>Price USD</th>
+                        <th>Price</th>
                         <th>24h %</th>
                         <th>7d %</th>
-                        <th>Marketcap USD</th>
+                        <th>Marketcap</th>
                         <th>Volume(24h)</th>
+                        <th>Circulating Supply</th>
                     </tr>
                 </thead>
                 <tbody>
