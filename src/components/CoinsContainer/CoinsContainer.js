@@ -1,12 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {useState, useEffect} from 'react'
 import Loading from '../Loading/Loading'
 import Coin from '../Coin/Coin'
+import Titulo from '../Titulo/Titulo'
+import FavoritesContext from '../Context/FavoriteContext'
 import './_CoinsContainer.scss'
+
 
 const CoinsContainer = () => {
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true)
+
+    const { favorites } = useContext(FavoritesContext)
 
     useEffect(() => {
         fetch("https://api.coinlore.net/api/tickers/")
@@ -18,17 +23,18 @@ const CoinsContainer = () => {
 
     return (
         <section className='coinsSection'>
+            <Titulo text="All Coins" />
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>24h %</th>
-                        <th>7d %</th>
-                        <th>Marketcap</th>
-                        <th>Volume(24h)</th>
-                        <th>Circulating Supply</th>
+                    <th className="coinFavorite"><span className="far fa-star"/></th>
+                        <th className="coinRank">#</th>
+                        <th className="coinName">Name</th>
+                        <th className="coinPrice">Price</th>
+                        <th className="coin24">24h %</th>
+                        <th className="coin7">7d %</th>
+                        <th className="coinMarketcap">Marketcap</th>
+                        <th className="coinVolume">Volume(24h)</th>
                     </tr>
                 </thead>
                 <tbody>

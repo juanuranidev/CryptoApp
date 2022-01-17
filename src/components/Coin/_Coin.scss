@@ -5,28 +5,34 @@ tr{
     box-shadow: 0px 1px 0px 0px rgba(248, 250, 253, 10);
     td{
         border: none;
-        padding: 1rem 0rem;
-        font-size: 0.8rem;
+        padding: 1rem 0.4rem;
+        font-size: 1rem;
         font-weight: 500;
+        .emptyStar, .fullStar{
+            cursor: pointer;
+            color: #ffd27d;
+        }
+        .emptyStar, .fullStar:active{
+            transform: scale(.95);
+        }
         .coinSymbol{
             opacity: 0.6;
-            padding-left: 0.2rem;
-        }
-        .supplySymbol{
             padding-left: 0.2rem;
         }
         .arrow{
             padding-right: 0.2rem;
         }
     }
+    .coinName{
+        text-align: left;
+    }
     .profit{
+        // width: 5%;
         color: green;
     }
     .loss{
+        // width: 5%;
         color: red;
-    }
-    .coinName{
-        text-align: left;
     }
 }
 tr:hover{
