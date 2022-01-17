@@ -1,16 +1,21 @@
 import React, {useContext} from 'react'
 import FavoritesContext from '../Context/FavoriteContext'
+import SearchBarContext from '../Context/SearchBarContext'
 import './_Coin.scss'
-
 
 const Coin = ({data}) => {
     const {addToFavorites, deleteFromFavorites, favorites} = useContext(FavoritesContext)
-    console.log(favorites)
-
-
+    const {searchTerm} = useContext(SearchBarContext)
+    
     return (
         <>
-            {data.map(coin =>    
+            {data.filter((coin) => {
+                if(searchTerm == ""){
+                    return coin
+                } else if(coin.name.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return coin
+                }
+            }).map(coin =>    
                 <tr key={coin.id} className="coin">
                     {favorites.includes(coin)
                     ?   <td className="coinFavorite"><span className="fas fa-star fullStar" onClick={() => deleteFromFavorites(coin)} /></td>

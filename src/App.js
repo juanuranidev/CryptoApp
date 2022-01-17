@@ -1,13 +1,18 @@
 import React from 'react'
+import { FavoritesContextProvider } from './components/Context/FavoriteContext';
+import { SearchBarContextProvider } from './components/Context/SearchBarContext';
+import SearchBar from './components/SearchBar/SearchBar'
 import CoinsContainer from './components/CoinsContainer/CoinsContainer';
 import FavoriteCoinsContainer from './components/FavoriteCoinsContainer/FavoriteCoinsContainer';
-import { FavoritesContextProvider } from './components/Context/FavoriteContext';
 
 function App() {
   return (
     <FavoritesContextProvider>
-      <FavoriteCoinsContainer />
-      <CoinsContainer />
+      <SearchBarContextProvider>
+        <SearchBar />
+        <FavoriteCoinsContainer />
+        <CoinsContainer />
+      </SearchBarContextProvider>
     </FavoritesContextProvider>
   );
 }

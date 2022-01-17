@@ -1,9 +1,8 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {useState, useEffect} from 'react'
 import Loading from '../Loading/Loading'
 import Coin from '../Coin/Coin'
 import Titulo from '../Titulo/Titulo'
-import FavoritesContext from '../Context/FavoriteContext'
 import './_CoinsContainer.scss'
 
 
@@ -11,15 +10,12 @@ const CoinsContainer = () => {
     const [data, setData] = useState([])
     const [loader, setLoader] = useState(true)
 
-    const { favorites } = useContext(FavoritesContext)
-
     useEffect(() => {
         fetch("https://api.coinlore.net/api/tickers/")
         .then(resp => resp.json())
         .then(data => setData(data.data))
         .finally(() => setLoader(false))
     }, [])
-    console.log(data)
 
     return (
         <section className='coinsSection'>

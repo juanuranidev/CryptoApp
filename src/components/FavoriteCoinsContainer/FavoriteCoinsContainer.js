@@ -23,9 +23,8 @@ const FavoriteCoinsContainer = () => {
                         <th className="coinVolume">Volume(24h)</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody>           
                     <Coin data={favorites} />
-                    {/* {loader ?   <tr><th><Loading /></th></tr>  :   <Coin data={data} />}         */}
                 </tbody>
             </table>
         </section>
