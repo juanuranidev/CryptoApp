@@ -1,11 +1,20 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import Coin from '../Coin/Coin'
 import FavoritesContext from '../Context/FavoriteContext'
 import Titulo from '../Titulo/Titulo'
 import './_FavoriteCoinsContainer.scss'
 
 const FavoriteCoinsContainer = () => {
-    const {favorites} = useContext(FavoritesContext)
+    const {favorites, setFavorites} = useContext(FavoritesContext)
+
+    // useEffect(() => {
+    //     let data = localStorage.getItem('favoriteCoins')
+    //     data===true
+    //     ? setFavorites(JSON.parse(data))
+    //     : console.log("error")
+
+    // }, [])
+
 
     return(
         <section className='favoriteCoinsSection'>

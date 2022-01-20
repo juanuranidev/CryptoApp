@@ -1,19 +1,17 @@
 import React from 'react'
-import { FavoritesContextProvider } from './components/Context/FavoriteContext';
-import { SearchBarContextProvider } from './components/Context/SearchBarContext';
-import SearchBar from './components/SearchBar/SearchBar'
 import CoinsContainer from './components/CoinsContainer/CoinsContainer';
-import FavoriteCoinsContainer from './components/FavoriteCoinsContainer/FavoriteCoinsContainer';
+import CoinDetailContainer from './components/Pages/CoinDetailContainer/CoinDetailContainer'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 
 function App() {
   return (
-    <FavoritesContextProvider>
-      <SearchBarContextProvider>
-        <SearchBar />
-        <FavoriteCoinsContainer />
-        <CoinsContainer />
-      </SearchBarContextProvider>
-    </FavoritesContextProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path="/" element={<CoinsContainer />}  />
+        <Route exact path="/coins/:id" element={<CoinDetailContainer />} />
+        <Route exact path="/favorites" element={<CoinsContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

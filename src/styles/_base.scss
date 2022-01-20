@@ -6,4 +6,39 @@
     box-sizing: content-box;
     font-family: 'Open Sans', sans-serif;
     border: none;
+    color: #EAECEF;
+}
+
+// Variables
+$primario: #181A20;
+$secundario: #0B0E11;
+$terciario : #FCD535;
+// $terciario: #474D57;
+
+
+
+
+// Mixins
+// Flex Row
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+}
+// Flex Column
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+// Boton
+@mixin button {
+    background: $terciario;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0rem;
+    font-size: 1rem;
+    color:#0B0E11;
+    width: 10rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
 }

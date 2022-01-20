@@ -4,6 +4,8 @@ import Loading from '../Loading/Loading'
 import Coin from '../Coin/Coin'
 import Titulo from '../Titulo/Titulo'
 import './_CoinsContainer.scss'
+// import FavoritesContext from '../Context/FavoriteContext'
+// import { useContext } from 'react'
 
 
 const CoinsContainer = () => {
@@ -11,11 +13,12 @@ const CoinsContainer = () => {
     const [loader, setLoader] = useState(true)
 
     useEffect(() => {
-        fetch("https://api.coinlore.net/api/tickers/")
+        fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
         .then(resp => resp.json())
-        .then(data => setData(data.data))
-        .finally(() => setLoader(false))
+        .then(data => setData(data))
+        .finally(() => {setLoader(false)})
     }, [])
+    console.log(data)
 
     return (
         <section className='coinsSection'>
@@ -24,17 +27,17 @@ const CoinsContainer = () => {
                 <thead>
                     <tr>
                     <th className="coinFavorite"><span className="far fa-star"/></th>
-                        <th className="coinRank">#</th>
+                        <th className="coinRank">Image</th>
                         <th className="coinName">Name</th>
                         <th className="coinPrice">Price</th>
                         <th className="coin24">24h %</th>
-                        <th className="coin7">7d %</th>
                         <th className="coinMarketcap">Marketcap</th>
-                        <th className="coinVolume">Volume(24h)</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {loader ?   <tr><th><Loading /></th></tr>  :   <Coin data={data} />}        
+                    {loader
+                    ?   <tr><th><Loading /></th></tr>
+                    :   <Coin data={data} />}        
                 </tbody>
             </table>
         </section>

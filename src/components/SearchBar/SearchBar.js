@@ -7,7 +7,7 @@ const SearchBar = () => {
    const {getValue} = useContext(SearchBarContext)
  
     return (
-        <input type="text" placeholder="Search your coin..." className="searchBar" onChange={getValue}></input>
+        <input type="text" placeholder="Search your coin..." className="searchBar" onChange={getValue} />
     )
 }
 
