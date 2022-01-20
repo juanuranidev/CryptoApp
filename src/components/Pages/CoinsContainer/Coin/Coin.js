@@ -19,18 +19,17 @@ const Coin = ({data}) => {
                     ?   <td className="coinFavorite"><span className="fas fa-star fullStar" onClick={() => deleteFromFavorites(coin)} /></td>
                     :   <td className="coinFavorite"><span className="far fa-star emptyStar" onClick={() => addToFavorites(coin)} /></td>                        
                     } */}
-                    <td><span className="far fa-star emptyStar" /></td>     
-                    <td><img src={coin.image} className="coinImage" /></td>
-                    <td className="coinName" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coinSymbol">{coin.symbol}</span></td>
+                    <td><span className="coin_emptyStar far fa-star emptyStar" /></td>     
+                    <td><img src={coin.image} className="coin_image" /></td>
+                    <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
                     {parseInt((coin.current_price))>1
                     ?   <td>${coin.current_price.toLocaleString('en')}</td>
                     :   <td>${coin.current_price}</td>}
                     {coin.price_change_percentage_24h<0.00
-                    ?   <td className="loss"><span className="fas fa-sort-down arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>
-                    :   <td className="profit"><span className="fas fa-sort-up arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>}
-                    <td className="coinMarketcap" >${parseInt((coin.market_cap)).toLocaleString('en')}</td>
+                    ?   <td className="coin_loss"><span className="fas fa-sort-down coin_loss_arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>
+                    :   <td className="coin_profit"><span className="fas fa-sort-up coin_profit_arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>}
+                    <td>${parseInt((coin.market_cap)).toLocaleString('en')}</td>
                 </tr>
-                // 
             )}
         </>
     )

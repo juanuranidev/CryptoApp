@@ -1,0 +1,22 @@
+@import '../../../styles/base';
+
+.coinsSection{
+    background-color: $primario;
+    // margin-bottom: 5rem;
+    table{
+        margin: 0rem auto;
+        text-align: center;
+        border-collapse: collapse;
+        width: 60rem;
+        thead{
+            th{
+                padding: 1.5rem 0rem;
+                font-size: 1.2rem;
+            }
+            .coin_name{
+                text-align: left;
+                padding-left: 1rem;
+            }
+        }
+    }
+}

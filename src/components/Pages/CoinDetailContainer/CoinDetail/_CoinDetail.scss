@@ -27,10 +27,10 @@
         margin-bottom: 5rem;
         .coinTitle_h1{
             font-size: 3rem;
-            margin-bottom: 0.5rem;
+            margin: 0rem 1rem 0.5rem 1rem;
             .coinTitle_h1_span{
                 font-weight: 800;
-                opacity: 0.4;
+                opacity: 0.6;
             }
         }
         .coinTitle_p{
@@ -42,63 +42,65 @@
         align-items: center;
         justify-content: space-evenly;
         margin-bottom: 5rem;
-        .coinInformation_div{
-            @include flexColumn();
-            padding: 1rem 1rem 0rem 1rem;
-            border: 1px solid black;
-            background-color: $secundario;
-            border-radius: 0.5rem;
-            text-align: left;
-            width: 35rem;
-            .coinInformation_div_p{
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                .coinInformation_div_p_span{
-                    margin-left: 1rem;
-                }
-            }
-            .coinPriceChange{
-                .coinPriceChange_p{
+        .coinInformation{ 
+            .coinInformation_div{
+                @include flexColumn();
+                padding: 1rem 1rem 0rem 1rem;
+                border: 1px solid black;
+                background-color: $secundario;
+                border-radius: 0.5rem;
+                text-align: left;
+                width: 35rem;
+                .coinInformation_div_p{
                     font-size: 1.5rem;
                     margin-bottom: 1rem;
+                    .coinInformation_div_p_span{
+                        margin-left: 1rem;
+                    }
                 }
-                .coinPriceChange_div{
-                    @include flexRow();
-                    .coinPriceChange_div_p{
-                        width: 50%;
+                .coinPriceChange{
+                    .coinPriceChange_p{
                         font-size: 1.5rem;
                         margin-bottom: 1rem;
-                        .coinPriceChange_div_p_span{
-                            margin-left: 1rem;
+                    }
+                    .coinPriceChange_div{
+                        @include flexRow();
+                        .coinPriceChange_div_p{
+                            width: 50%;
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                            .coinPriceChange_div_p_span{
+                                margin-left: 1rem;
+                            }
+                        }
+                        .profit{
+                            color: green;
+                        }
+                        .loss{
+                            color: red;
                         }
                     }
-                    .profit{
+                }
+                .coinVotes{
+                    @include flexRow();
+                    .coinVotes_p{
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                        .coinVotes_p_span{
+                            padding-right: 0.5rem;
+                            margin: 0rem;
+                        }
+                    }
+                    .upVotes{
+                        margin-right: 2rem;
                         color: green;
                     }
-                    .loss{
+                    .downVotes{
                         color: red;
                     }
                 }
+
             }
-            .coinVotes{
-                @include flexRow();
-                .coinVotes_p{
-                    font-size: 1.5rem;
-                    margin-bottom: 1rem;
-                    .coinVotes_p_span{
-                        padding-right: 0.5rem;
-                        margin: 0rem;
-                    }
-                }
-                .upVotes{
-                    margin-right: 2rem;
-                    color: green;
-                }
-                .downVotes{
-                    color: red;
-                }
-            }
-            
         }
         .coinButton{
             margin: 1rem auto 0rem auto;
@@ -122,9 +124,306 @@
         padding: 1rem 1rem 0rem 1rem;
         margin: 0rem 1rem 5rem 1rem;
         border-radius: 0.5rem;
+        line-height: 1.5;
         .coinSecondInformation_p{
             font-size: 1.5rem;
             margin-bottom: 1rem;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .coinDetail{
+        .coinFirstInformation{
+            @include flexColumn();
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 5rem;
+            .coinImage{
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .coinDetail{
+        background-color: $primario;
+        @include flexColumn();
+        text-align: center;
+        .coinBackButton{
+            margin: 2.5rem 1rem;
+            @include flexRow();
+            .coinBackButton_a{
+                .coinBackButton_a_button{
+                    font-size: 1rem;
+                    font-weight: 800;
+                    background-color: $terciario;
+                    color: #0B0E11;
+                    padding: 0.8rem 0rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                    width: 15rem;
+                }
+                .coinBackButton_a_button:active{
+                    transform: scale(0.96);
+                }
+            }
+        }
+        .coinTitle{
+            margin-bottom: 5rem;
+            .coinTitle_h1{
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+                .coinTitle_h1_span{
+                    font-weight: 800;
+                    opacity: 0.6;
+                }
+            }
+            .coinTitle_p{
+                font-size: 1.5rem;
+            }
+        }
+        .coinFirstInformation{
+            @include flexColumn();
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 5rem;
+            .coinImage{
+                margin-bottom: 5rem;
+            }
+            .coinInformation{ 
+                .coinInformation_div{
+                    @include flexColumn();
+                    padding: 1rem 1rem 0rem 1rem;
+                    border: 1px solid black;
+                    background-color: $secundario;
+                    border-radius: 0.5rem;
+                    text-align: left;
+                    width: 30rem;
+                    .coinInformation_div_p{
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                        .coinInformation_div_p_span{
+                            margin-left: 1rem;
+                        }
+                    }
+                    .coinPriceChange{
+                        .coinPriceChange_p{
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        .coinPriceChange_div{
+                            @include flexColumn();
+                            .coinPriceChange_div_p{
+                                width: 50%;
+                                font-size: 1.5rem;
+                                margin-bottom: 1rem;
+                                .coinPriceChange_div_p_span{
+                                    margin-left: 1rem;
+                                }
+                            }
+                            .profit{
+                                color: green;
+                            }
+                            .loss{
+                                color: red;
+                            }
+                        }
+                    }
+                    .coinVotes{
+                        @include flexRow();
+                        .coinVotes_p{
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                            .coinVotes_p_span{
+                                padding-right: 0.5rem;
+                                margin: 0rem;
+                            }
+                        }
+                        .upVotes{
+                            margin-right: 2rem;
+                            color: green;
+                        }
+                        .downVotes{
+                            color: red;
+                        }
+                    }
+    
+                }
+            }
+            .coinButton{
+                margin: 1rem auto 0rem auto;
+                .coinButton_button{
+                    font-size: 1rem;
+                    font-weight: 800;
+                    background-color: $terciario;
+                    color: #0B0E11;
+                    padding: 0.8rem 0rem;
+                    width: 15rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                }
+                .coinButton_button:active{
+                    transform: scale(0.96);
+                }
+            }
+        }
+        .coinSecondInformation{
+            background-color: $secundario;
+            padding: 1rem 1rem 0rem 1rem;
+            margin: 0rem 1rem 5rem 1rem;
+            border-radius: 0.5rem;
+            line-height: 1.5;
+            .coinSecondInformation_p{
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .coinDetail{
+        background-color: $primario;
+        @include flexColumn();
+        text-align: center;
+        .coinBackButton{
+            margin: 2.5rem 1rem;
+            @include flexRow();
+            .coinBackButton_a{
+                .coinBackButton_a_button{
+                    font-size: 1rem;
+                    font-weight: 800;
+                    background-color: $terciario;
+                    color: #0B0E11;
+                    padding: 0.8rem 0rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                    width: 15rem;
+                }
+                .coinBackButton_a_button:active{
+                    transform: scale(0.96);
+                }
+            }
+        }
+        .coinTitle{
+            margin-bottom: 5rem;
+            .coinTitle_h1{
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+                .coinTitle_h1_span{
+                    font-weight: 800;
+                    opacity: 0.6;
+                }
+            }
+            .coinTitle_p{
+                font-size: 1.5rem;
+            }
+        }
+        .coinFirstInformation{
+            @include flexColumn();
+            align-items: center;
+            justify-content: space-evenly;
+            margin-bottom: 5rem;
+            
+            .coinImage{
+                margin-bottom: 5rem;
+            }
+            .coinInformation{ 
+                width: 90%;
+                .coinInformation_div{
+                    @include flexColumn();
+                    padding: 1rem 1rem 0rem 1rem;
+                    border: 1px solid black;
+                    background-color: $secundario;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    width: 90%;
+                    margin: auto;
+                    .coinInformation_div_p{
+                        @include flexColumn();
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                        .coinInformation_div_p_span{
+                            margin-left: 0rem;
+                        }
+                    }
+                    .coinPriceChange{
+                        .coinPriceChange_p{
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        .coinPriceChange_div{
+                            @include flexColumn();
+                            .coinPriceChange_div_p{
+                                // width: 50%;
+                                @include flexColumn();
+                                font-size: 1.5rem;
+                                margin: 0rem auto 1rem auto;
+                                .coinPriceChange_div_p_span{
+                                    margin-left: 0rem;
+                                    width: 100%;
+                                    // margin: 0rem 2rem;
+                                }
+                            }
+                            .profit{
+                                color: green;
+                            }
+                            .loss{
+                                color: red;
+                            }
+                        }
+                    }
+                    .coinVotes{
+                        @include flexRow();
+                        justify-content: center;
+                        .coinVotes_p{
+                            font-size: 1.5rem;
+                            margin-bottom: 1rem;
+                            .coinVotes_p_span{
+                                padding-right: 0.5rem;
+                                margin: 0rem;
+                            }
+                        }
+                        .upVotes{
+                            margin-right: 2rem;
+                            color: green;
+                        }
+                        .downVotes{
+                            color: red;
+                        }
+                    }
+    
+                }
+            }
+            .coinButton{
+                margin: 2rem auto 0rem auto;
+                .coinButton_button{
+                    font-size: 1rem;
+                    font-weight: 800;
+                    background-color: $terciario;
+                    color: #0B0E11;
+                    padding: 0.8rem 0rem;
+                    width: 15rem;
+                    cursor: pointer;
+                    border-radius: 0.5rem;
+                }
+                .coinButton_button:active{
+                    transform: scale(0.96);
+                }
+            }
+        }
+        .coinSecondInformation{
+            background-color: $secundario;
+            padding: 1rem 1rem 0rem 1rem;
+            margin: 0rem 1rem 5rem 1rem;
+            border-radius: 0.5rem;
+            // line-height: 1.8;
+            .coinSecondInformation_p{
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
         }
     }
 }

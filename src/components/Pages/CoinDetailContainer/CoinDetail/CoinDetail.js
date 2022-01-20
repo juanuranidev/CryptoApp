@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import parse from 'html-react-parser'
 import './_CoinDetail.scss'
 
 const CoinDetail = ({coin}) => {
@@ -13,7 +14,7 @@ const CoinDetail = ({coin}) => {
       </div>
       <div className="coinTitle">
         <h1 className="coinTitle_h1">{coin.name} <span className="coinTitle_h1_span">{coin.symbol}</span></h1>
-        <p className="coinTitle_p">Rank:{coin.market_cap_rank}</p>
+        <p className="coinTitle_p">Rank: {coin.market_cap_rank}</p>
       </div>
       <div className="coinFirstInformation">
         <div className="coinImage">
@@ -61,7 +62,7 @@ const CoinDetail = ({coin}) => {
         </div>
       </div>
       <div className="coinSecondInformation">
-        <p className="coinSecondInformation_p">{coin.description.en}</p>
+        <p className="coinSecondInformation_p">{parse(coin.description.en)}</p>
         <p className="coinSecondInformation_p">{coin.name} page:  <span><a href={coin.links.homepage[0]} target="_blank">Homepage</a></span></p>
       </div>    
     </div>)

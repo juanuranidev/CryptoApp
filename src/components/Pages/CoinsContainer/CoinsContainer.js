@@ -1,8 +1,8 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import Loading from '../Loading/Loading'
-import Coin from '../Coin/Coin'
-import Titulo from '../Titulo/Titulo'
+import Loading from '../../Loading/Loading'
+import Coin from './Coin/Coin'
+import Titulo from '../../Titulo/Titulo'
 import './_CoinsContainer.scss'
 // import FavoritesContext from '../Context/FavoriteContext'
 // import { useContext } from 'react'
@@ -22,16 +22,16 @@ const CoinsContainer = () => {
 
     return (
         <section className='coinsSection'>
-            <Titulo text="All Coins" />
+            {/* <Titulo text="All Coins" /> */}
             <table>
                 <thead>
                     <tr>
                     <th className="coinFavorite"><span className="far fa-star"/></th>
-                        <th className="coinRank">Image</th>
-                        <th className="coinName">Name</th>
-                        <th className="coinPrice">Price</th>
-                        <th className="coin24">24h %</th>
-                        <th className="coinMarketcap">Marketcap</th>
+                        <th>Image</th>
+                        <th className="coin_name">Name</th>
+                        <th>Price</th>
+                        <th>24h %</th>
+                        <th>Marketcap</th>
                     </tr>
                 </thead>
                 <tbody>

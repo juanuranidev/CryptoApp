@@ -8,28 +8,28 @@
     border: none;
     color: #EAECEF;
 }
+body{
+    background-color: #181A20;
+}
 
 // Variables
 $primario: #181A20;
 $secundario: #0B0E11;
 $terciario : #FCD535;
-// $terciario: #474D57;
-
-
-
+$hover: #474D57;
+$textoPrimario: #EAECEF;;
 
 // Mixins
-// Flex Row
 @mixin flexRow {
     display: flex;
     flex-direction: row;
 }
-// Flex Column
+
 @mixin flexColumn {
     display: flex;
     flex-direction: column;
 }
-// Boton
+
 @mixin button {
     background: $terciario;
     border-radius: 0.5rem;

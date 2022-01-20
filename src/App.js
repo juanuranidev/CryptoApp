@@ -1,5 +1,5 @@
 import React from 'react'
-import CoinsContainer from './components/CoinsContainer/CoinsContainer';
+import CoinsContainer from './components/Pages/CoinsContainer/CoinsContainer';
 import CoinDetailContainer from './components/Pages/CoinDetailContainer/CoinDetailContainer'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 

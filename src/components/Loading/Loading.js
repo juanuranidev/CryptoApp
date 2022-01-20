@@ -3,9 +3,7 @@ import './_Loading.scss'
 
 const Loading = () => {
     return (
-        <>
-            <span className="fab fa-bitcoin fa-4x loading" />
-        </>
+        <span className="fab fa-bitcoin fa-7x loading" />
     )
 }
 
