@@ -1,25 +1,20 @@
 import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
-// import FavoritesContext from '../Context/FavoriteContext'
-// import SearchBarContext from '../Context/SearchBarContext'
+import WatchlistContext from '../../../Context/WatchlistContext'
 import './_Coin.scss'
 
 const Coin = ({data}) => {
-    // const {addToFavorites, deleteFromFavorites, favorites} = useContext(FavoritesContext)
-    // const {searchTerm} = useContext(SearchBarContext)
-    
-    console.log(data)
+    const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)
+
+    console.log(watchlist)
 
     return (
         <>
             {data.map(coin =>    
-                // 
                 <tr key={coin.id} className="coin">
-                    {/* {favorites.includes(coin)
-                    ?   <td className="coinFavorite"><span className="fas fa-star fullStar" onClick={() => deleteFromFavorites(coin)} /></td>
-                    :   <td className="coinFavorite"><span className="far fa-star emptyStar" onClick={() => addToFavorites(coin)} /></td>                        
-                    } */}
-                    <td><span className="coin_emptyStar far fa-star emptyStar" /></td>     
+                    {watchlist.includes(coin)
+                    ?   <td><span className="coin_emptyStar fas fa-star fullStar" onClick={() => deleteCoinFromWatchlist(coin)} /></td>
+                    :   <td><span className="coin_emptyStar far fa-star emptyStar" onClick={() => addCoinToWatchlist(coin)} /></td>}
                     <td><img src={coin.image} className="coin_image" /></td>
                     <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
                     {parseInt((coin.current_price))>1

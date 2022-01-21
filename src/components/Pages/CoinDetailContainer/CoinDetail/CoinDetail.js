@@ -22,8 +22,10 @@ const CoinDetail = ({coin}) => {
         </div>
         <div className="coinInformation">
           <div className="coinInformation_div">
-            <p className="coinInformation_div_p">Current Price: <span className="coinInformation_div_p_span">${(coin.market_data.current_price.usd).toLocaleString('es')}</span></p>
-            <p className="coinInformation_div_p">Market Cap: <span className="coinInformation_div_p_span">${(coin.market_data.market_cap.usd).toLocaleString('es')}</span></p>
+          {coin.market_data.current_price.usd>1
+          ? <p className="coinInformation_div_p">Current Price:<span className="coinInformation_div_p_span">${(coin.market_data.current_price.usd).toLocaleString('en')}</span></p>
+          : <p className="coinInformation_div_p">Current Price:<span className="coinInformation_div_p_span">${coin.market_data.current_price.usd}</span></p>}
+            <p className="coinInformation_div_p">Market Cap:<span className="coinInformation_div_p_span">${(coin.market_data.market_cap.usd).toLocaleString('en')}</span></p>
             <div className="coinPriceChange">
               <p className="coinPriceChange_p">Price change:</p>
               <div className="coinPriceChange_div">
@@ -62,7 +64,7 @@ const CoinDetail = ({coin}) => {
         </div>
       </div>
       <div className="coinSecondInformation">
-        <p className="coinSecondInformation_p">{parse(coin.description.en)}</p>
+        {coin.description.en?<p className="coinSecondInformation_p">{parse(coin.description.en)}</p>:null}
         <p className="coinSecondInformation_p">{coin.name} page:  <span><a href={coin.links.homepage[0]} target="_blank">Homepage</a></span></p>
       </div>    
     </div>)

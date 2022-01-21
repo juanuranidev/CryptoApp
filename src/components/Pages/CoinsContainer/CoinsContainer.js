@@ -1,5 +1,6 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
+import {Link} from 'react-router-dom'
 import Loading from '../../Loading/Loading'
 import Coin from './Coin/Coin'
 import Titulo from '../../Titulo/Titulo'
@@ -23,6 +24,7 @@ const CoinsContainer = () => {
     return (
         <section className='coinsSection'>
             {/* <Titulo text="All Coins" /> */}
+            <button><Link to="/watchlist">Watchlist</Link></button>
             <table>
                 <thead>
                     <tr>
