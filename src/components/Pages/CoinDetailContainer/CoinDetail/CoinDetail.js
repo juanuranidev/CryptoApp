@@ -66,7 +66,7 @@ const CoinDetail = ({coin}) => {
           </div>  
           <div className="coinButton">
             {isInWatchlist(coin)
-              ? <button className="coinButton_button_delete" onClick={() => deleteCoinFromWatchlist(coin)} >Delete fron Watchlist</button>
+              ? <button className="coinButton_button_delete" onClick={() => deleteCoinFromWatchlist(coin)} >Delete from Watchlist</button>
               : <button className="coinButton_button_add" onClick={() => addCoinToWatchlist(coin)} >Add To Watchlist</button>}
           </div>
         </div>
