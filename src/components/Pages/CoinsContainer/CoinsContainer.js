@@ -20,7 +20,7 @@ const CoinsContainer = () => {
     return (
         <section className='coinsSection'>
             {/* <Titulo text="All Coins" /> */}
-            <button><Link to="/watchlist">Watchlist</Link></button>
+            <button className="watchlistButton"><Link to="/watchlist">Watchlist</Link></button>
             <table>
                 <thead>
                     <tr>

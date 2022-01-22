@@ -20,3 +20,12 @@
         }
     }
 }
+.watchlistButton{
+    @include button();
+    margin: 1rem;
+    a{
+        color: $primario;
+        text-decoration: none;
+    }
+}
+    
