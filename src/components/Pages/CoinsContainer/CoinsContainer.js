@@ -24,7 +24,6 @@ const CoinsContainer = () => {
             <table>
                 <thead>
                     <tr>
-                    <th className="coinFavorite"><span className="far fa-star"/></th>
                         <th>Image</th>
                         <th className="coin_name">Name</th>
                         <th>Price</th>

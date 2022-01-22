@@ -6,7 +6,7 @@ export const WatchlistContext = createContext([])
 
 export const WatchlistContextProvider = ({children}) => {
     const [watchlist, setWatchlist] = useState([])
-
+console.log(watchlist)
     function addCoinToWatchlist(coin){setWatchlist([...watchlist, coin])}
     function deleteCoinFromWatchlist(coin){
         setWatchlist(watchlist.filter((x) => x !== coin))
