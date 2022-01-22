@@ -1,0 +1,20 @@
+@import '../../../styles/base';
+
+.backButton{
+    @include flexRow();
+    margin: 2rem;
+    .backButton_a{
+        .backButton_a_button{
+            color: $primario;
+            font-size: 1rem;
+            font-weight: 700;
+            background-color: $terciario;
+            padding: 0.6rem 1.8rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .backButton_a_button:active{
+            transform: scale(0.96);
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 .coinsSection{
     background-color: $primario;
-    // margin-bottom: 5rem;
+    margin-bottom: 5rem;
     table{
         margin: 0rem auto;
         text-align: center;
@@ -18,14 +18,6 @@
                 padding-left: 1rem;
             }
         }
-    }
-}
-.watchlistButton{
-    @include button();
-    margin: 1rem;
-    a{
-        color: $primario;
-        text-decoration: none;
     }
 }
     

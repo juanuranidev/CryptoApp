@@ -1,0 +1,38 @@
+@import '../../styles/base';
+
+.nav{
+    @include flexRow();
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background-color: $secundario;
+    .nav_logo{
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: 800;
+    }
+    .nav_a{
+        .nav_a_button{
+            color: $primario;
+            font-size: 1rem;
+            font-weight: 700;
+            background-color: $terciario;
+            padding: 0.6rem 1.8rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .nav_a_button:active{
+            transform: scale(0.96);
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .nav{
+        @include flexColumn();
+        align-items: center;
+        .nav_logo{
+            margin-bottom: 2.5rem;
+        }
+    }
+}

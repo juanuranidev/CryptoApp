@@ -4,11 +4,13 @@ import CoinDetailContainer from './components/Pages/CoinDetailContainer/CoinDeta
 import WatchlistCointainer from './components/Pages/WatchlistCointainer/WatchlistCointainer'
 import { WatchlistContextProvider } from './components/Context/WatchlistContext';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <BrowserRouter>
       <WatchlistContextProvider>
+      <Navbar />
         <Routes>
           <Route exact path="/" element={<CoinsContainer />}  />
           <Route exact path="/coins/:id" element={<CoinDetailContainer />} />

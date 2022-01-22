@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import {Link} from 'react-router-dom'
+import BackButton from '../../Buttons/BackButton/BackButton';
 import WatchlistContext from '../../Context/WatchlistContext';
 import WatchlistCoin from './WatchlistCoin/WatchlistCoin';
 
@@ -9,7 +9,7 @@ const WatchlistCointainer = () => {
   return(
     <section className='coinsSection'>
     {/* <Titulo text="All Coins" /> */}
-    <button><Link to="/">Watchlist</Link></button>
+    <BackButton />
       <table>
           <thead>
               <tr>

@@ -6,9 +6,10 @@ export const WatchlistContext = createContext([])
 
 export const WatchlistContextProvider = ({children}) => {
     const [watchlist, setWatchlist] = useState([])
-    function addCoinToWatchlist(coin){setWatchlist([...watchlist, coin])}
-    function deleteCoinFromWatchlist(coin){setWatchlist(watchlist.filter((x) => x !== coin))}
-    
+    function addCoinToWatchlist(coin){setWatchlist([...watchlist, coin])}    
+    function deleteCoinFromWatchlist(coin){setWatchlist(watchlist.filter((x) => x.id !== coin.id))
+      }
+
     useEffect(() => {
         let watchlist = localStorage.getItem("watchlist")
         if (watchlist) {

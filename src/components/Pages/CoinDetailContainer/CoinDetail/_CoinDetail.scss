@@ -4,25 +4,6 @@
     background-color: $primario;
     @include flexColumn();
     text-align: center;
-    .coinBackButton{
-        margin: 2.5rem 1rem;
-        @include flexRow();
-        .coinBackButton_a{
-            .coinBackButton_a_button{
-                font-size: 1rem;
-                font-weight: 800;
-                background-color: $terciario;
-                color: #0B0E11;
-                padding: 0.8rem 0rem;
-                cursor: pointer;
-                border-radius: 0.5rem;
-                width: 15rem;
-            }
-            .coinBackButton_a_button:active{
-                transform: scale(0.96);
-            }
-        }
-    }
     .coinTitle{
         margin-bottom: 5rem;
         .coinTitle_h1{
@@ -104,14 +85,15 @@
         .coinButton{
             margin: 1rem auto 0rem auto;
             .coinButton_button_add{
+                color: $primario;
                 font-size: 1rem;
-                font-weight: 800;
+                font-weight: 700;
                 background-color: $terciario;
                 color: #0B0E11;
-                padding: 0.8rem 0rem;
+                padding: 0.6rem 0rem;
                 width: 15rem;
-                cursor: pointer;
                 border-radius: 0.5rem;
+                cursor: pointer;
             }
             .coinButton_button:active{
                 transform: scale(0.96);

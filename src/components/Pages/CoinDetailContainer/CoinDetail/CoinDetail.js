@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
-import {Link} from 'react-router-dom'
 import parse from 'html-react-parser'
 import WatchlistContext from '../../../Context/WatchlistContext';
+import BackButton from '../../../Buttons/BackButton/BackButton';
 import './_CoinDetail.scss'
 
 const CoinDetail = ({coin}) => {
@@ -15,9 +15,7 @@ const CoinDetail = ({coin}) => {
 
   return (
     <div className="coinDetail">
-      <div className="coinBackButton">
-      <Link to="/" className="coinBackButton_a"><button className="coinBackButton_a_button">Back</button></Link>
-      </div>
+      <BackButton />
       <div className="coinTitle">
         <h1 className="coinTitle_h1">{coin.name} <span className="coinTitle_h1_span">{coin.symbol}</span></h1>
         <p className="coinTitle_p">Rank: {coin.market_cap_rank}</p>
