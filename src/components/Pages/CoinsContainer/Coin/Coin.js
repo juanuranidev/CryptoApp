@@ -6,15 +6,19 @@ import './_Coin.scss'
 const Coin = ({data}) => {
     const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)
 
-    console.log(watchlist)
+    function isInWatchlist(coin) {
+        return watchlist.some(function(product) {
+          return product.id === coin.id;
+        }); 
+      }
 
     return (
         <>
             {data.map(coin =>    
                 <tr key={coin.id} className="coin">
-                    {watchlist.includes(coin)
-                    ?   <td><span className="coin_emptyStar fas fa-star fullStar" onClick={() => deleteCoinFromWatchlist(coin)} /></td>
-                    :   <td><span className="coin_emptyStar far fa-star emptyStar" onClick={() => addCoinToWatchlist(coin)} /></td>}
+                    {isInWatchlist(coin)
+                    ?   <td className="coinFavorite"><span className="fas fa-star fullStar" onClick={() => deleteCoinFromWatchlist(coin)} /></td>
+                    :   <td className="coinFavorite"><span className="far fa-star emptyStar" onClick={() => addCoinToWatchlist(coin)} /></td>}            
                     <td><img src={coin.image} className="coin_image" /></td>
                     <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
                     {parseInt((coin.current_price))>1
@@ -39,3 +43,5 @@ export default Coin
 //         return coin
 //     }
 // })
+
+

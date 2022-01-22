@@ -103,7 +103,7 @@
         }
         .coinButton{
             margin: 1rem auto 0rem auto;
-            .coinButton_button{
+            .coinButton_button_add{
                 font-size: 1rem;
                 font-weight: 800;
                 background-color: $terciario;
@@ -115,6 +115,11 @@
             }
             .coinButton_button:active{
                 transform: scale(0.96);
+            }
+            .coinButton_button_delete{
+                @extend .coinButton_button_add;
+                background-color: $loss;
+                color: $textoPrimario;
             }
         }
     }

@@ -8,7 +8,10 @@ export const WatchlistContextProvider = ({children}) => {
     const [watchlist, setWatchlist] = useState([])
 
     function addCoinToWatchlist(coin){setWatchlist([...watchlist, coin])}
-    function deleteCoinFromWatchlist(coin){setWatchlist(watchlist.filter((x) => x !== coin))}
+    function deleteCoinFromWatchlist(coin){
+        setWatchlist(watchlist.filter((x) => x !== coin))
+        console.log("eliminado")
+    }
     
     useEffect(() => {
         let watchlist = localStorage.getItem("watchlist")
@@ -26,7 +29,7 @@ export const WatchlistContextProvider = ({children}) => {
             watchlist,
             setWatchlist,
             addCoinToWatchlist,
-            deleteCoinFromWatchlist
+            deleteCoinFromWatchlist 
         }}>
             {children}
         </WatchlistContext.Provider>

@@ -5,9 +5,6 @@ import Loading from '../../Loading/Loading'
 import Coin from './Coin/Coin'
 import Titulo from '../../Titulo/Titulo'
 import './_CoinsContainer.scss'
-// import FavoritesContext from '../Context/FavoriteContext'
-// import { useContext } from 'react'
-
 
 const CoinsContainer = () => {
     const [data, setData] = useState([])
@@ -19,7 +16,6 @@ const CoinsContainer = () => {
         .then(data => setData(data))
         .finally(() => {setLoader(false)})
     }, [])
-    console.log(data)
 
     return (
         <section className='coinsSection'>

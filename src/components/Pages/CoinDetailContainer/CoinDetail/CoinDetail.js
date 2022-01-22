@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import parse from 'html-react-parser'
+import WatchlistContext from '../../../Context/WatchlistContext';
 import './_CoinDetail.scss'
 
 const CoinDetail = ({coin}) => {
+  const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)
 
-    console.log(coin)
+  function isInWatchlist(coin) {
+    return watchlist.some(function(product) {
+      return product.id === coin.id;
+    }); 
+  }
 
   return (
     <div className="coinDetail">
@@ -59,7 +65,9 @@ const CoinDetail = ({coin}) => {
             </div>        
           </div>  
           <div className="coinButton">
-            <button className="coinButton_button">Add To Watchlist</button>
+            {isInWatchlist(coin)
+              ? <button className="coinButton_button_delete" onClick={() => deleteCoinFromWatchlist(coin)} >Delete fron Watchlist</button>
+              : <button className="coinButton_button_add" onClick={() => addCoinToWatchlist(coin)} >Add To Watchlist</button>}
           </div>
         </div>
       </div>
