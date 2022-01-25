@@ -2,11 +2,16 @@ import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import './_Coin.scss'
 
-const Coin = ({data}) => {
-
+const Coin = ({data, search}) => {
     return (
         <>
-            {data.map(coin =>    
+            {data.filter((coin) => {
+                    if(search == ""){
+                        return coin
+                    } else if(coin.name.toLowerCase().includes(search.toLowerCase())){
+                        return coin
+                    }
+                }).map(coin =>    
                 <tr key={coin.id} className="coin">
                     <td><img src={coin.image} className="coin_image" /></td>
                     <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
@@ -24,13 +29,3 @@ const Coin = ({data}) => {
 }
 
 export default Coin
-
-// data.filter((coin) => {
-//     if(searchTerm == ""){
-//         return coin
-//     } else if(coin.name.toLowerCase().includes(searchTerm.toLowerCase())){
-//         return coin
-//     }
-// })
-
-

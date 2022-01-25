@@ -1,15 +1,16 @@
-import React, { useContext } from 'react';
-import BackButton from '../../Buttons/BackButton/BackButton';
-import WatchlistContext from '../../Context/WatchlistContext';
-import WatchlistCoin from './WatchlistCoin/WatchlistCoin';
+import React, { useContext } from 'react'
+import BackButton from '../../Buttons/BackButton/BackButton'
+import Titulo from '../../Titulo/Titulo'
+import WatchlistContext from '../../Context/WatchlistContext'
+import WatchlistCoin from './WatchlistCoin/WatchlistCoin'
 
 const WatchlistCointainer = () => {
   const {watchlist} = useContext(WatchlistContext)
 
   return(
     <section className='coinsSection'>
-    {/* <Titulo text="All Coins" /> */}
     <BackButton />
+    <Titulo text="Watchlist" />
       <table>
           <thead>
               <tr>

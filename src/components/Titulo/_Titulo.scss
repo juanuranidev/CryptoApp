@@ -1,8 +1,8 @@
 @import '../../styles/base';
 
 .titulo{
-    display: flex;
+    @include flexRow();
     justify-content: center;
-    font-size: 2rem;
-    margin: 2rem auto 1rem auto;
+    font-size: 2.5rem;
+    margin: 2rem auto;
 }
