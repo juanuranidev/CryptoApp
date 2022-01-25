@@ -13,86 +13,25 @@
         font-size: 1.25rem;
         color: $primario;
     }
-    table{
-        margin: 0rem auto;
-        text-align: center;
-        border-collapse: collapse;
-        width: 60rem;
-        thead{
-            th{
-                padding: 1.5rem 0rem;
-                font-size: 1.2rem;
-            }
-            .coin_name{
-                text-align: left;
-                padding-left: 1rem;
+    .table{ 
+        overflow-x:scroll;
+        overflow-x: hidden;
+        table{
+            margin: 0rem auto;
+            text-align: center;
+            border-collapse: collapse;
+            width: 60rem;
+            thead{
+                th{
+                    padding: 1.5rem 0rem;
+                    font-size: 1.2rem;
+                }
+                .coin_name{
+                    text-align: left;
+                    padding-left: 1rem;
+                }
             }
         }
     }
-}
     
-@media(max-width: 992px){
-    .coinsSection{
-        // background-color: $primario;
-        // margin: 5rem 0rem;
-        .searchBar{
-            // @include flexRow();
-            // border-radius: 0.5rem;
-            // padding: 0rem 0.5rem;
-            // width: 20rem;
-            // margin: 0rem auto 2rem auto;
-            // height: 2.5rem;
-            // font-size: 1.25rem;
-            // color: $primario;
-        }
-        table{
-            // margin: 0rem auto;
-            // text-align: center;
-            // border-collapse: collapse;
-            width: 40rem;
-            thead{
-                th{
-                    padding: 1.5rem 0.5rem;
-                    // font-size: 1.2rem;
-                }
-                .coin_name{
-                    // text-align: left;
-                    // padding-left: 1rem;
-                }
-            }
-        }
-    }
-}
-
-@media(max-width: 768px){
-    .coinsSection{
-        // background-color: $primario;
-        // margin: 5rem 0rem;
-        .searchBar{
-            // @include flexRow();
-            // border-radius: 0.5rem;
-            // padding: 0rem 0.5rem;
-            // width: 20rem;
-            // margin: 0rem auto 2rem auto;
-            // height: 2.5rem;
-            // font-size: 1.25rem;
-            // color: $primario;
-        }
-        table{
-            // margin: 0rem auto;
-            // text-align: center;
-            // border-collapse: collapse;
-            width: 20rem;
-            thead{
-                th{
-                    padding: 1.5rem 0.5rem;
-                    font-size: 1rem;
-                }
-                .coin_name{
-                    // text-align: left;
-                    // padding-left: 1rem;
-                }
-            }
-        }
-    }
 }

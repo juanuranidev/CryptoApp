@@ -21,22 +21,24 @@ const CoinsContainer = () => {
         <section className='coinsSection'>
             {/* <Titulo text="All Coins" /> */}
             <input className="searchBar" placeholder="Search your coin..." onChange={(e) => setSearch(e.target.value)} />
-            <table>
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th className="coin_name">Name</th>
-                        <th>Price</th>
-                        <th>24h %</th>
-                        <th>Marketcap</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {loader
-                    ?   <tr><th><Loading /></th></tr>
-                    :   <Coin data={data} search={search} />}        
-                </tbody>
-            </table>
+            <div className="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th className="coin_name">Name</th>
+                            <th>Price</th>
+                            <th>24h %</th>
+                            <th>Marketcap</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {loader
+                        ?   <tr><th><Loading /></th></tr>
+                        :   <Coin data={data} search={search} />}        
+                    </tbody>
+                </table>
+            </div>
         </section>
     )
 }

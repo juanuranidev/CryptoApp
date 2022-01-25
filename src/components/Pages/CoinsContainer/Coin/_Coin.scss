@@ -21,7 +21,6 @@
             text-decoration: none; 
             color: $textoPrimario;   
         }
-
     }
     .coin_image{
         width: 3rem;   
@@ -45,6 +44,7 @@
     }
     .coin_profit{
         color: green;
+        
         .coin_profit_arrow{
             padding-right: 0.6rem;
             @extend .coin_profit;
@@ -53,100 +53,4 @@
 }
 .coin:hover{
     background-color: $hover;
-}
-
-@media(max-width: 992px){
-    .coin{
-        td{
-            padding: 1.5rem 0.5rem;    
-        }
-    }
-}
-@media(max-width: 768px){
-    .coin{
-        td{
-            padding: 1.5rem 0.5rem;
-            font-size: 10.2rem;    
-        }
-        // .coin_image{
-        //     width: 3rem;   
-        //     @include flexRow();
-        //     margin: auto;
-        // }
-        // .coin_name{
-        //     text-align: left;
-        //     padding-left: 1rem;
-        //     .coin_name_symbol{
-        //         opacity: 0.6;
-        //         padding-left: 0.5rem;
-        //     }
-        // }
-        // .coin_loss{
-        //     color: red;
-        //     .coin_loss_arrow{
-        //         padding-right: 0.6rem;
-        //         @extend .coin_loss;
-        //     }
-        // }
-        // .coin_profit{
-        //     color: green;
-        //     .coin_profit_arrow{
-        //         padding-right: 0.6rem;
-        //         @extend .coin_profit;
-        //     }
-        // }
-    }
-}
-@media(max-width: 576px){
-    .coin{
-        // border: none;
-        // box-shadow: 0px -2px 0px 0px rgb(71 77 87);
-        // background-color: $primario;
-        td{
-            // border: none;
-            padding: 1.5rem 0rem;
-            font-size: 0.6rem;
-            // font-weight: 500;
-            // color: #ffffff;   
-              
-            // .coin_emptyStar, .fullStar{
-            //     color: $terciario;
-            // }
-            // .coin_emptyStar, .fullStar:active{
-            //     transform: scale(.95);
-            // }
-            // a{
-            //     text-decoration: none; 
-            //     color: $textoPrimario;   
-            // }
-    
-        }
-        // .coin_image{
-        //     width: 3rem;   
-        //     @include flexRow();
-        //     margin: auto;
-        // }
-        // .coin_name{
-        //     text-align: left;
-        //     padding-left: 1rem;
-        //     .coin_name_symbol{
-        //         opacity: 0.6;
-        //         padding-left: 0.5rem;
-        //     }
-        // }
-        // .coin_loss{
-        //     color: red;
-        //     .coin_loss_arrow{
-        //         padding-right: 0.6rem;
-        //         @extend .coin_loss;
-        //     }
-        // }
-        // .coin_profit{
-        //     color: green;
-        //     .coin_profit_arrow{
-        //         padding-right: 0.6rem;
-        //         @extend .coin_profit;
-        //     }
-        // }
-    }
 }
