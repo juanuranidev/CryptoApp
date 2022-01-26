@@ -47,7 +47,16 @@
     }
 }
 @media(max-width: 992px){
+    .coinsSection{
     .table{
         overflow-x: scroll;
+    }
+}
+}
+@media(max-width: 768px){
+    .coinsSection{
+        .searchBar{
+            width: 80%;
+        }
     }
 }
