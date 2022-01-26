@@ -11,6 +11,7 @@ const WatchlistCointainer = () => {
     <section className='coinsSection'>
     <BackButton />
     <Titulo text="Watchlist" />
+    <div className="table">
       <table>
           <thead>
               <tr>
@@ -25,6 +26,7 @@ const WatchlistCointainer = () => {
             <WatchlistCoin data={watchlist} />    
           </tbody>
       </table>
+    </div>
     </section>
   );
 };
