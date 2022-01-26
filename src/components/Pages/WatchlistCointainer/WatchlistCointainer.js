@@ -10,7 +10,7 @@ const WatchlistCointainer = () => {
   return(
     <section className='coinsSection'>
     <BackButton />
-    <Titulo text="Watchlist" />
+    {/* <Titulo text="Watchlist" /> */}
     <div className="table">
       <table>
           <thead>

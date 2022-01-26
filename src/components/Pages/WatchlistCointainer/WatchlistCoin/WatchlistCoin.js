@@ -7,8 +7,8 @@ const WatchlistCoin = ({data}) => {
         <>
             {data.map(coin =>    
                 <tr key={coin.id} className="coin">
-                    <td><img src={coin.image.small} className="coin_image" /></td>
-                    <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
+                    <td><Link to={`/coins/${coin.id}`}><img src={coin.image.small} className="coin_image" /></Link></td>
+                    <td className="coin_name" >{coin.name}<span className="coin_name_symbol">{coin.symbol}</span></td>
                     {parseInt((coin.market_data.current_price.usd))>1
                     ?   <td>${coin.market_data.current_price.usd.toLocaleString('en')}</td>
                     :   <td>${coin.market_data.current_price.usd}</td>}

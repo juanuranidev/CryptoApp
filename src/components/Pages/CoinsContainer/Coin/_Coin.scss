@@ -10,7 +10,6 @@
         font-size: 1.2rem;
         font-weight: 500;
         color: #ffffff;   
-          
         .coin_emptyStar, .fullStar{
             color: $terciario;
         }
@@ -30,6 +29,7 @@
     .coin_name{
         text-align: left;
         padding-left: 1rem;
+        width: 35%;
         .coin_name_symbol{
             opacity: 0.6;
             padding-left: 0.5rem;

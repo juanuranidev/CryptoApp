@@ -5,6 +5,7 @@ import WatchlistCointainer from './components/Pages/WatchlistCointainer/Watchlis
 import { WatchlistContextProvider } from './components/Context/WatchlistContext';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/coins/:id" element={<CoinDetailContainer />} />
           <Route exact path="/watchlist" element={<WatchlistCointainer />} />
         </Routes>
+        <Footer />
       </WatchlistContextProvider>
     </BrowserRouter>
   );
