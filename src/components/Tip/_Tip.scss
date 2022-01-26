@@ -1,0 +1,24 @@
+@import '../../styles/base';
+
+.tip{
+    @include flexRow();
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    background-color: $secundario;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    border-radius: 0.5rem;
+    text-align: center;
+    .tip_span{
+        color: #f7931a;
+        margin-right: 0.5rem;
+    }
+    .tip_p{
+        width: 8rem;
+        font-size: 0.8rem;
+    }
+}
+

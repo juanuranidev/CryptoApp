@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import Loading from '../../Loading/Loading'
 import Coin from './Coin/Coin'
 import Titulo from '../../Titulo/Titulo'
+import Tip from '../../Tip/Tip'
 import './_CoinsContainer.scss'
 
 const CoinsContainer = () => {
@@ -38,6 +39,7 @@ const CoinsContainer = () => {
                         :   <Coin data={data} search={search} />}        
                     </tbody>
                 </table>
+                <Tip />
             </div>
         </section>
     )

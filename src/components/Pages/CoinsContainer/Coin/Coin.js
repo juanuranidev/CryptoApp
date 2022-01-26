@@ -14,7 +14,7 @@ const Coin = ({data, search}) => {
                 }).map(coin =>    
                 <tr key={coin.id} className="coin">
                     <td><Link to={`/coins/${coin.id}`}><img src={coin.image} className="coin_image" /></Link></td>
-                    <td className="coin_name" ><Link to={`/coins/${coin.id}`}>{coin.name}</Link><span className="coin_name_symbol">{coin.symbol}</span></td>
+                    <td className="coin_name" >{coin.name}<span className="coin_name_symbol">{coin.symbol}</span></td>
                     {parseInt((coin.current_price))>1
                     ?   <td>${coin.current_price.toLocaleString('en')}</td>
                     :   <td>${coin.current_price}</td>}

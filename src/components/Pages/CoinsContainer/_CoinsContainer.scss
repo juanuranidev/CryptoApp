@@ -14,8 +14,6 @@
         color: $primario;
     }
     .table{ 
-        overflow-x:scroll;
-        overflow-x: hidden;
         table{
             margin: 0rem auto;
             text-align: center;
@@ -33,5 +31,9 @@
             }
         }
     }
-    
+}
+@media(max-width: 992px){
+    .table{
+        overflow-x: scroll;
+    }
 }
