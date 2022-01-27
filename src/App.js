@@ -1,10 +1,10 @@
 import React from 'react'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { WatchlistContextProvider } from './components/Context/WatchlistContext';
+import Navbar from './components/Navbar/Navbar';
 import CoinsContainer from './components/Pages/CoinsContainer/CoinsContainer';
 import CoinDetailContainer from './components/Pages/CoinDetailContainer/CoinDetailContainer'
 import WatchlistCointainer from './components/Pages/WatchlistCointainer/WatchlistCointainer'
-import { WatchlistContextProvider } from './components/Context/WatchlistContext';
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
 function App() {

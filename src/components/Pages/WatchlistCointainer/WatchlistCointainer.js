@@ -10,7 +10,7 @@ const WatchlistCointainer = () => {
   return(
     <section className='coinsSection'>
     <BackButton />
-    {/* <Titulo text="Watchlist" /> */}
+    <Titulo text="Watchlist" />
     <div className="table">
       <table>
           <thead>
@@ -32,8 +32,3 @@ const WatchlistCointainer = () => {
 };
 
 export default WatchlistCointainer;
-
-
-{/* <h1>watchlist</h1>
-      <Link to="/"><button>Back</button></Link>
-        <Coin data={data} ></Coin> */}

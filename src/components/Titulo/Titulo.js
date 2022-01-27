@@ -8,4 +8,3 @@ const Titulo = ({text}) => {
 }
 
 export default Titulo
-
