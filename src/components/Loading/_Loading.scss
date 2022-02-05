@@ -1,12 +1,14 @@
 @import '../../styles/base';
 
 .loading{
-    color:  #f7931a;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    animation: coinRotate 1s infinite linear;
     height: 90vh;
+    .loading_span{
+        color:  #f7931a;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        animation: coinRotate 1s infinite linear;
+    }
 }
 
 @keyframes coinRotate {

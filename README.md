@@ -1,5 +1,8 @@
 # Cryptoapp
-Crypto page that allows you to see the price of the 100 cryptocurrencies with the highest market capitalization at the moment.<br/>
+Crypto page that allows you to see the price of the 100 cryptocurrencies with the highest market capitalization at the moment.
+
+# Demo
+https://cryptohunterapp.netlify.app/
 
 ## Main Technologies
 <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react"><br>
@@ -13,9 +16,20 @@ Add a cryptocurrency to the watchlist<br>
 Search for a cryptocurrency
 
 ## Libraries
-**html-react-parser**<br/>
-npm install html-react-parser --save<br/>
+**React Router Dom for routing 6.2.1**
+npm install react-router-dom@6<br>
+https://reactrouter.com/
+
+**SASS for styles 1.48.0**
+npm install sass<br>
+https://create-react-app.dev/docs/adding-a-sass-stylesheet/
+
+**html-react-parser 1.4.5**<br>
+npm install html-react-parser --save<br>
 https://www.npmjs.com/package/html-react-parser
 
 ## Data
 API data from https://www.coingecko.com/es/api/documentation
+
+## My Portfolio
+https://juanuranidev.github.io/portfolio/
