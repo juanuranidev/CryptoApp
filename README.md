@@ -16,11 +16,11 @@ Add a cryptocurrency to the watchlist<br>
 Search for a cryptocurrency
 
 ## Libraries
-**React Router Dom for routing 6.2.1**
+**React Router Dom for routing 6.2.1**<br>
 npm install react-router-dom@6<br>
 https://reactrouter.com/
 
-**SASS for styles 1.48.0**
+**SASS for styles 1.48.0**<br>
 npm install sass<br>
 https://create-react-app.dev/docs/adding-a-sass-stylesheet/
 
