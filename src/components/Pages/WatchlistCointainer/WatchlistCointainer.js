@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import BackButton from '../../Buttons/BackButton/BackButton'
-import Titulo from '../../Titulo/Titulo'
+import Title from '../../Title/Title'
 import WatchlistContext from '../../Context/WatchlistContext'
 import WatchlistCoin from './WatchlistCoin/WatchlistCoin'
 
@@ -10,7 +10,7 @@ const WatchlistCointainer = () => {
   return(
     <section className='coinsSection'>
     <BackButton />
-    <Titulo text="Watchlist" />
+    <Title text="Watchlist" />
     <div className="table">
       <table>
           <thead>

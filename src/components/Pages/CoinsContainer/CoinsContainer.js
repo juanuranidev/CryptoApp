@@ -2,7 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import Loading from '../../Loading/Loading'
 import Coin from './Coin/Coin'
-import Titulo from '../../Titulo/Titulo'
+import Title from '../../Title/Title'
 import Tip from '../../Tip/Tip'
 import './_CoinsContainer.scss'
 
@@ -34,7 +34,7 @@ const CoinsContainer = () => {
 
     return (
         <section className='coinsSection'>
-            <Titulo text="All Coins" />
+            <Title text="All Coins" />
             <input className="searchBar" placeholder="Search your coin..." onChange={(e) => setSearch(e.target.value)} />
             <div className="table">
                 <table>

@@ -1,10 +1,10 @@
 import React from 'react'
-import './_Titulo.scss'
+import './_Title.scss'
 
-const Titulo = ({text}) => {
+const Title = ({text}) => {
     return (
         <h2 className="titulo">{text}</h2>
     )
 }
 
-export default Titulo
+export default Title
