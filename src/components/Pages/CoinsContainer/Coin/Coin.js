@@ -19,8 +19,8 @@ const Coin = ({data, search}) => {
                     ?   <td>${coin.current_price.toLocaleString('en')}</td>
                     :   <td>${coin.current_price}</td>}
                     {coin.price_change_percentage_24h<0.00
-                    ?   <td className="coin_loss"><span className="fas fa-sort-down coin_loss_arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>
-                    :   <td className="coin_profit"><span className="fas fa-sort-up coin_profit_arrow" />{coin.price_change_percentage_24h.toFixed(2)}%</td>}
+                    ?   <td className="coin_loss"><span className="fas fa-sort-down coin_loss_arrow" />{parseFloat(coin.price_change_percentage_24h).toFixed(2)}%</td>
+                    :   <td className="coin_profit"><span className="fas fa-sort-up coin_profit_arrow" />{parseFloat(coin.price_change_percentage_24h).toFixed(2)}%</td>}
                     <td>${parseInt((coin.market_cap)).toLocaleString('en')}</td>
                 </tr>
             )}
