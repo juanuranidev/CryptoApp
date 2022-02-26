@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './_Coin.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './_Coin.scss';
 
 const Coin = ({data, search}) => {
     return (
         <>
-            {data.filter((coin) => {
+            {data.filter(coin => {
                     if(search == ""){
                         return coin
                     } else if(coin.name.toLowerCase().includes(search.toLowerCase())){
@@ -28,4 +28,4 @@ const Coin = ({data, search}) => {
     )
 }
 
-export default Coin
+export default Coin;

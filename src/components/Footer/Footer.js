@@ -1,11 +1,10 @@
 import React from 'react';
-import './_Footer.scss'
+import './_Footer.scss';
 
 const Footer = () => {
   return (
-    <footer>
-      <span className="fas fa-code footer_span" />
-      <p className="footer_p">by <a href='https://juanuranidev.github.io/portfolio/' target="_blank">Juan</a></p>
+    <footer className='footer'>
+      <p className='footer_p'> Made with <span className='fa fa-heart footer_p_span'/> by <a href='https://juanurani.netlify.app/' target='_blank' rel='noopener noreferrer' className='footer_p_a'>Juan</a></p>
     </footer>
   );
 };

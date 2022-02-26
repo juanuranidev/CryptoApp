@@ -1,7 +1,5 @@
-@import '../../styles/base';
-
 .titulo{
-    @include flexRow();
+    display: flex;
     justify-content: center;
     font-size: 2.5rem;
     margin: 2rem auto;

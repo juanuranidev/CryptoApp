@@ -1,15 +1,18 @@
-@import '../../styles/base';
-
 footer{
-    @include flexRow();
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: $secundario;
-    .footer_span{
-        margin-right: 0.5rem;
-    }
+    background-color: #0B0E11;
     .footer_p{
-        font-size: 1.2rem;
+        color: #ffffff;
+        font-weight: 600;
+        .footer_p_span{
+            color: #b6332b;
+        }
+        .footer_p_a{
+            color: #ffffff;
+            font-weight: 700;
+        }
     }
 }

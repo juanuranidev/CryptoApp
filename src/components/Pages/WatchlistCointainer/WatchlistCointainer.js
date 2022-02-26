@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import BackButton from '../../Buttons/BackButton/BackButton'
-import Title from '../../Title/Title'
-import WatchlistContext from '../../Context/WatchlistContext'
-import WatchlistCoin from './WatchlistCoin/WatchlistCoin'
+import React, { useContext } from 'react';
+import BackButton from '../../BackButton/BackButton';
+import Title from '../../Title/Title';
+import WatchlistContext from '../../Context/WatchlistContext';
+import WatchlistCoin from './WatchlistCoin/WatchlistCoin';
 
 const WatchlistCointainer = () => {
   const {watchlist} = useContext(WatchlistContext)
@@ -15,11 +15,11 @@ const WatchlistCointainer = () => {
       <table>
           <thead>
               <tr>
-                  <th>Image</th>
-                  <th className="coin_name">Name</th>
-                  <th>Price</th>
-                  <th>24h %</th>
-                  <th>Marketcap</th>
+                <th>Image</th>
+                <th className="coin_name">Name</th>
+                <th>Price</th>
+                <th>24h %</th>
+                <th>Marketcap</th>
               </tr>
           </thead>
           <tbody>

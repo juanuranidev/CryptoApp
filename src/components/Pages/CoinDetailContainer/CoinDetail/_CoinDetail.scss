@@ -1,8 +1,7 @@
-@import '../../../../styles/base';
-
 .coinDetail{
-    background-color: $primario;
-    @include flexColumn();
+    display: flex;
+    flex-direction: column;
+    background-color: #181A20;
     text-align: center;
     .coinTitle{
         margin-bottom: 5rem;
@@ -19,15 +18,16 @@
         }
     }
     .coinFirstInformation{
-        @include flexRow();
+        display: flex;
         align-items: center;
         justify-content: space-evenly;
         margin-bottom: 5rem;
         .coinInformation{ 
             .coinInformation_div{
-                @include flexColumn();
+                display: flex;
+                flex-direction: column;
                 padding: 1rem 1rem 0rem 1rem;
-                background-color: $secundario;
+                background-color: #0B0E11;
                 border-radius: 0.5rem;
                 text-align: left;
                 width: 35rem;
@@ -44,7 +44,7 @@
                         margin-bottom: 1rem;
                     }
                     .coinPriceChange_div{
-                        @include flexRow();
+                        display: flex;
                         .coinPriceChange_div_p{
                             width: 50%;
                             font-size: 1.5rem;
@@ -54,15 +54,15 @@
                             }
                         }
                         .profit{
-                            color: $profit;
+                            color: #28a745;
                         }
                         .loss{
-                            color: $loss;
+                            color: #dc3545;
                         }
                     }
                 }
                 .coinVotes{
-                    @include flexRow();
+                    display: flex;
                     .coinVotes_p{
                         font-size: 1.5rem;
                         margin-bottom: 1rem;
@@ -73,10 +73,10 @@
                     }
                     .upVotes{
                         margin-right: 2rem;
-                        color: $profit;
+                        color: #28a745;
                     }
                     .downVotes{
-                        color: $loss;
+                        color: #dc3545;
                     }
                 }
 
@@ -85,10 +85,10 @@
         .coinButton{
             margin: 1rem auto 0rem auto;
             .coinButton_button_add{
-                color: $primario;
+                color: #181A20;
                 font-size: 1rem;
                 font-weight: 700;
-                background-color: $terciario;
+                background-color: #FCD535;
                 color: #0B0E11;
                 padding: 0.6rem 0rem;
                 width: 15rem;
@@ -100,13 +100,13 @@
             }
             .coinButton_button_delete{
                 @extend .coinButton_button_add;
-                background-color: $loss;
-                color: $textoPrimario;
+                background-color: #dc3545;
+                color: #EAECEF;
             }
         }
     }
     .coinSecondInformation{
-        background-color: $secundario;
+        background-color: #0B0E11;
         padding: 1rem 1rem 0rem 1rem;
         margin: 0rem 1rem 5rem 1rem;
         border-radius: 0.5rem;
@@ -121,7 +121,8 @@
 @media (max-width: 992px){
     .coinDetail{
         .coinFirstInformation{
-            @include flexColumn();
+            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
             margin-bottom: 5rem;
@@ -143,7 +144,8 @@
                     width: 30rem;
                     .coinPriceChange{
                         .coinPriceChange_div{
-                            @include flexColumn();
+                            display: flex;
+                            flex-direction: column;
                         }
                     }    
                 }
@@ -162,16 +164,19 @@
                     width: 90%;
                     margin: auto;
                     .coinInformation_div_p{
-                        @include flexColumn();
+                        display: flex;
+                        flex-direction: column;
                         .coinInformation_div_p_span{
                             margin-left: 0rem;
                         }
                     }
                     .coinPriceChange{
                         .coinPriceChange_div{
-                            @include flexColumn();
+                            display: flex;
+                            flex-direction: column;
                             .coinPriceChange_div_p{
-                                @include flexColumn();
+                                display: flex;
+                                flex-direction: column;
                                 font-size: 1.5rem;
                                 margin: 0rem auto 1rem auto;
                                 .coinPriceChange_div_p_span{
@@ -193,5 +198,3 @@
         }
     }
 }
-
-

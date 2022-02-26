@@ -1,11 +1,9 @@
-@import '../../styles/base';
-
 .nav{
-    @include flexRow();
+    display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem;
-    background-color: $secundario;
+    background-color: #0B0E11;
     .nav_logo{
         font-size: 1.5rem;
         text-decoration: none;
@@ -13,10 +11,10 @@
     }
     .nav_a{
         .nav_a_button{
-            color: $primario;
+            color: #181A20;
             font-size: 1rem;
             font-weight: 700;
-            background-color: $terciario;
+            background-color: #FCD535;
             padding: 0.6rem 1.8rem;
             border-radius: 0.5rem;
             cursor: pointer;
@@ -29,7 +27,8 @@
 
 @media(max-width: 576px) {
     .nav{
-        @include flexColumn();
+        display: flex;
+        flex-direction: column;
         align-items: center;
         .nav_logo{
             margin-bottom: 2.5rem;

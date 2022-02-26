@@ -1,14 +1,12 @@
-@import '../../../styles/base';
-
 .backButton{
-    @include flexRow();
-    margin: 2rem;
+    display: flex;
+    margin: 5rem 0rem 2rem 2rem;
     .backButton_a{
         .backButton_a_button{
-            color: $primario;
+            color: #181A20;
             font-size: 1rem;
             font-weight: 700;
-            background-color: $terciario;
+            background-color: #FCD535;
             padding: 0.6rem 1.8rem;
             border-radius: 0.5rem;
             cursor: pointer;

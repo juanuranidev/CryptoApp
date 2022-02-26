@@ -1,7 +1,7 @@
-import React, {useState, useEffect, useContext} from 'react'
-import { useParams } from 'react-router-dom'
-import Loading from '../../Loading/Loading'
-import CoinDetail from './CoinDetail/CoinDetail'
+import React, {useState, useEffect} from 'react';
+import { useParams } from 'react-router-dom';
+import Loading from '../../Loading/Loading';
+import CoinDetail from './CoinDetail/CoinDetail';
 
 const CoinDetailContainer = () => {
   const [coin, setCoin] = useState({})
@@ -17,11 +17,9 @@ const CoinDetailContainer = () => {
   }, [])
   
   return (<>
-          {
-          loading
-            ? <Loading />
-            : <CoinDetail coin={coin} />
-          }
+          {loading
+          ? <Loading />
+          : <CoinDetail coin={coin} />}
         </>)
 };
 

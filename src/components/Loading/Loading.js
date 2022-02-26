@@ -1,5 +1,5 @@
-import React from 'react'
-import './_Loading.scss'
+import React from 'react';
+import './_Loading.scss';
 
 const Loading = () => {
     return (
@@ -9,4 +9,4 @@ const Loading = () => {
     )
 }
 
-export default Loading
+export default Loading;

@@ -1,17 +1,16 @@
-@import '../../../styles/base';
-
 .coinsSection{
-    background-color: $primario;
+    background-color: #181A20;
     margin: 5rem 0rem;
+    min-height: 100vh;
     .searchBar{
-        @include flexRow();
+        display: flex;
         border-radius: 0.5rem;
         padding: 0rem 0.5rem;
         width: 20rem;
         margin: 0rem auto 2rem auto;
         height: 2.5rem;
         font-size: 1.25rem;
-        color: $primario;
+        color: #181A20;
     }
     .table{ 
         &::-webkit-scrollbar {
@@ -21,11 +20,11 @@
             height: 0.5rem;
         }
         &::-webkit-scrollbar-track {
-            background-color: $secundario;
+            background-color: #0B0E11;
         }
         &::-webkit-scrollbar-thumb {
             border-radius: 0.5rem;
-            background: $hover;
+            background: #474D57;
             box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
         }
         table{

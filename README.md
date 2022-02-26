@@ -32,7 +32,7 @@ https://www.npmjs.com/package/html-react-parser
 API data from https://www.coingecko.com/es/api/documentation
 
 # My Portfolio
-https://juanuranidev.github.io/portfolio/
+https://juanurani.netlify.app/
 
 # My LinkedIn
 https://www.linkedin.com/in/juanurani/

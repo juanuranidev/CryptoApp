@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import parse from 'html-react-parser'
+import parse from 'html-react-parser';
 import WatchlistContext from '../../../Context/WatchlistContext';
-import BackButton from '../../../Buttons/BackButton/BackButton';
-import './_CoinDetail.scss'
+import BackButton from '../../../BackButton/BackButton';
+import './_CoinDetail.scss';
 
 const CoinDetail = ({coin}) => {
   const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)

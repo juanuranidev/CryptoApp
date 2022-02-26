@@ -1,5 +1,5 @@
 import React from 'react';
-import './_Tip.scss'
+import './_Tip.scss';
 
 const Tip = () => {
   return (

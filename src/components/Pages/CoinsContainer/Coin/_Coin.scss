@@ -1,9 +1,7 @@
-@import '../../../../styles/base';
-
 .coin{
     border: none;
     box-shadow: 0px -2px 0px 0px rgb(71 77 87);
-    background-color: $primario;
+    background-color: #181A20;
     td{
         border: none;
         padding: 1.5rem 0rem;
@@ -11,19 +9,19 @@
         font-weight: 500;
         color: #ffffff;   
         .coin_emptyStar, .fullStar{
-            color: $terciario;
+            color: #FCD535;
         }
         .coin_emptyStar, .fullStar:active{
             transform: scale(.95);
         }
         a{
             text-decoration: none; 
-            color: $textoPrimario;   
+            color: #EAECEF;   
         }
     }
     .coin_image{
         width: 3rem;   
-        @include flexRow();
+        display: flex;
         margin: auto;
     }
     .coin_name{
@@ -52,5 +50,5 @@
     }
 }
 .coin:hover{
-    background-color: $hover;
+    background-color: #474D57;
 }

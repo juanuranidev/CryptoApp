@@ -1,10 +1,10 @@
-import React from 'react'
-import {useState, useEffect} from 'react'
-import Loading from '../../Loading/Loading'
-import Coin from './Coin/Coin'
-import Title from '../../Title/Title'
-import Tip from '../../Tip/Tip'
-import './_CoinsContainer.scss'
+import React from 'react';
+import {useState, useEffect} from 'react';
+import Loading from '../../Loading/Loading';
+import Coin from './Coin/Coin';
+import Title from '../../Title/Title';
+import Tip from '../../Tip/Tip';
+import './_CoinsContainer.scss';
 
 const CoinsContainer = () => {
     const [data, setData] = useState([])
@@ -59,4 +59,4 @@ const CoinsContainer = () => {
     )
 }
 
-export default CoinsContainer
+export default CoinsContainer;
