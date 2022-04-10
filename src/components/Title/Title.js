@@ -1,10 +1,10 @@
-import React from 'react'
-import './_Title.scss'
+import React from 'react';
+import './_Title.scss';
 
 const Title = ({text}) => {
     return (
-        <h2 className="titulo">{text}</h2>
-    )
+        <h2 className="title">{text}</h2>
+    );
 }
 
-export default Title
+export default Title;

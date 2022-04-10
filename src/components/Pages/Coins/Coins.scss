@@ -1,8 +1,8 @@
 .coinsSection{
     background-color: #181A20;
-    margin: 5rem 0rem;
+    padding: 5rem 0rem;
     min-height: 100vh;
-    .searchBar{
+    .coinsSection_input{
         display: flex;
         border-radius: 0.5rem;
         padding: 0rem 0.5rem;
@@ -11,8 +11,11 @@
         height: 2.5rem;
         font-size: 1.25rem;
         color: #181A20;
+        @media(max-width: 768px){
+            width: 80%;
+        }
     }
-    .table{ 
+    .coinsSection_div{ 
         &::-webkit-scrollbar {
             width: 10px;
         }
@@ -27,8 +30,11 @@
             background: #474D57;
             box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
         }
+        @media(max-width: 992px){
+            overflow-x: scroll;
+        }
         table{
-            margin: 0rem auto;
+            margin: auto;
             text-align: center;
             border-collapse: collapse;
             width: 60rem;
@@ -37,28 +43,14 @@
                     padding: 1.5rem 0rem;
                     font-size: 1.2rem;
                 }
-                .coin_hover{
-                    cursor: pointer;
-                }
-                .coin_name{
+                .coins_name{
                     text-align: left;
                     padding-left: 1rem;
                 }
+                .coins_sorter{
+                    cursor: pointer;
+                }
             }
-        }
-    }
-}
-@media(max-width: 992px){
-    .coinsSection{
-    .table{
-        overflow-x: scroll;
-    }
-}
-}
-@media(max-width: 768px){
-    .coinsSection{
-        .searchBar{
-            width: 80%;
         }
     }
 }

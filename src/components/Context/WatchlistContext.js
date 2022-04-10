@@ -2,13 +2,13 @@ import React from 'react';
 import { createContext } from 'react';
 import { useState, useEffect } from 'react';
 
-export const WatchlistContext = createContext([])
+export const WatchlistContext = createContext([]);
 
 export const WatchlistContextProvider = ({children}) => {
-    const [watchlist, setWatchlist] = useState([])
+    const [watchlist, setWatchlist] = useState([]);
 
-    function addCoinToWatchlist(coin){setWatchlist([...watchlist, coin])}     
-    function deleteCoinFromWatchlist(coin){setWatchlist(watchlist.filter((x) => x.id !== coin.id))}
+    const addCoinToWatchlist = (coin) => setWatchlist([...watchlist, coin]);     
+    const deleteCoinFromWatchlist = (coin) => setWatchlist(watchlist.filter((x) => x.id !== coin.id));
 
     useEffect(() => {
         let watchlist = localStorage.getItem("watchlist")

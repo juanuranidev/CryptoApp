@@ -1,14 +1,16 @@
-.loading{
+.loader{
     height: 90vh;
-    .loading_span{
+    background-color: #181A20;
+    .loader_span{
         color:  #f7931a;
         position: fixed;
         left: 50%;
         top: 50%;
         animation: coinRotate 1s infinite linear;
+        background-color: white;
+        border-radius: 100%;
     }
 }
-
 @keyframes coinRotate {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }

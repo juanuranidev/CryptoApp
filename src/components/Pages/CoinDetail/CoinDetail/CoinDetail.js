@@ -2,12 +2,12 @@ import React, {useContext} from 'react';
 import parse from 'html-react-parser';
 import WatchlistContext from '../../../Context/WatchlistContext';
 import BackButton from '../../../BackButton/BackButton';
-import './_CoinDetail.scss';
+import './CoinDetail.scss';
 
 const CoinDetail = ({coin}) => {
   const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)
 
-  function isInWatchlist(coin) {
+  const isInWatchlist = (coin) => {
     return watchlist.some(function(product) {
       return product.id === coin.id;
     }); 
@@ -26,35 +26,27 @@ const CoinDetail = ({coin}) => {
         </div>
         <div className="coinInformation">
           <div className="coinInformation_div">
-          {coin.market_data.current_price.usd>1
+          {coin.market_data.current_price.usd > 1
           ? <p className="coinInformation_div_p">Current Price:<span className="coinInformation_div_p_span">${(coin.market_data.current_price.usd).toLocaleString('en')}</span></p>
           : <p className="coinInformation_div_p">Current Price:<span className="coinInformation_div_p_span">${coin.market_data.current_price.usd}</span></p>}
             <p className="coinInformation_div_p">Market Cap:<span className="coinInformation_div_p_span">${(coin.market_data.market_cap.usd).toLocaleString('en')}</span></p>
             <div className="coinPriceChange">
               <p className="coinPriceChange_p">Price change:</p>
               <div className="coinPriceChange_div">
-                {
-                  coin.market_data.price_change_percentage_24h>0
-                  ? <p className="coinPriceChange_div_p">24 hours: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_24h).toFixed(2)}%</span></p>
-                  : <p className="coinPriceChange_div_p">24 hours: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_24h).toFixed(2)}%</span></p>
-                }
-                {
-                  coin.market_data.price_change_percentage_7d>0
-                  ? <p className="coinPriceChange_div_p">7 days: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_7d).toFixed(2)}%</span></p>
-                  : <p className="coinPriceChange_div_p">7 days: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_7d).toFixed(2) }%</span></p>
-                }
+                {coin.market_data.price_change_percentage_24h > 0
+                ? <p className="coinPriceChange_div_p">24 hours: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_24h).toFixed(2)}%</span></p>
+                : <p className="coinPriceChange_div_p">24 hours: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_24h).toFixed(2)}%</span></p>}
+                {coin.market_data.price_change_percentage_7d > 0
+                ? <p className="coinPriceChange_div_p">7 days: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_7d).toFixed(2)}%</span></p>
+                : <p className="coinPriceChange_div_p">7 days: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_7d).toFixed(2)}%</span></p>}
               </div>
               <div className="coinPriceChange_div">
-                {
-                  coin.market_data.price_change_percentage_30d>0
-                  ? <p className="coinPriceChange_div_p">30 days: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_30d).toFixed(2)}%</span></p>
-                  : <p className="coinPriceChange_div_p">30 days: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_30d).toFixed(2)}%</span></p>
-                }
-                {
-                  coin.market_data.price_change_percentage_1y>0
-                  ? <p className="coinPriceChange_div_p">1 year: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_1y).toFixed(2)}%</span></p>
-                  : <p className="coinPriceChange_div_p">1 year: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_1y).toFixed(2)}%</span></p>
-                }
+                {coin.market_data.price_change_percentage_30d > 0
+                ? <p className="coinPriceChange_div_p">30 days: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_30d).toFixed(2)}%</span></p>
+                : <p className="coinPriceChange_div_p">30 days: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_30d).toFixed(2)}%</span></p>}
+                {coin.market_data.price_change_percentage_1y > 0
+                ? <p className="coinPriceChange_div_p">1 year: <span className="coinPriceChange_div_p_span profit">{(coin.market_data.price_change_percentage_1y).toFixed(2)}%</span></p>
+                : <p className="coinPriceChange_div_p">1 year: <span className="coinPriceChange_div_p_span loss">{(coin.market_data.price_change_percentage_1y).toFixed(2)}%</span></p>}
               </div>
             </div>
             <div className="coinVotes">
@@ -64,13 +56,13 @@ const CoinDetail = ({coin}) => {
           </div>  
           <div className="coinButton">
             {isInWatchlist(coin)
-              ? <button className="coinButton_button_delete" onClick={() => deleteCoinFromWatchlist(coin)} >Delete from Watchlist</button>
-              : <button className="coinButton_button_add" onClick={() => addCoinToWatchlist(coin)} >Add To Watchlist</button>}
+            ? <button className="coinButton_button_delete" onClick={() => deleteCoinFromWatchlist(coin)} >Delete from Watchlist</button>
+            : <button className="coinButton_button_add" onClick={() => addCoinToWatchlist(coin)} >Add To Watchlist</button>}
           </div>
         </div>
       </div>
       <div className="coinSecondInformation">
-        {coin.description.en?<p className="coinSecondInformation_p">{parse(coin.description.en)}</p>:null}
+        {coin.description.en && <p className="coinSecondInformation_p">{parse(coin.description.en)}</p>}
         <p className="coinSecondInformation_p">{coin.name} page:  <span><a href={coin.links.homepage[0]} target="_blank">Homepage</a></span></p>
       </div>    
     </div>)

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import Loading from '../../Loading/Loading';
+import Loading from '../../Loader/Loader';
 import CoinDetail from './CoinDetail/CoinDetail';
 
 const CoinDetailContainer = () => {
@@ -16,11 +16,12 @@ const CoinDetailContainer = () => {
       .finally(() => setLoading(false))
   }, [])
   
-  return (<>
-          {loading
-          ? <Loading />
-          : <CoinDetail coin={coin} />}
-        </>)
+  return (
+    <>
+      {loading
+      ? <Loading />
+      : <CoinDetail coin={coin} />}
+    </>)
 };
 
 export default CoinDetailContainer;

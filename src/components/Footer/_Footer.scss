@@ -10,6 +10,17 @@ footer{
         .footer_p_span{
             color: #b6332b;
         }
+        .footer_p_span:hover{
+            animation: heartbeat 1.25s infinite;
+        }
+        @keyframes heartbeat{
+            0%{transform: scale(1);}
+            20%{transform: scale(.75);}
+            40%{transform: scale(1);}
+            60%{transform: scale(.75);}
+            80%{transform: scale(1);}
+            100%{transform: scale(1);}
+        }
         .footer_p_a{
             color: #ffffff;
             font-weight: 700;
