@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: #181A20;
     text-align: center;
+    padding: 5rem 0rem;
     .coinTitle{
         margin-bottom: 5rem;
         .coinTitle_h1{
@@ -144,20 +145,6 @@
                 @extend .coinButton_button_add;
                 background-color: #dc3545;
                 color: #EAECEF;
-            }
-        }
-    }
-    .coinSecondInformation{
-        background-color: #0B0E11;
-        padding: 1rem 1rem 0rem 1rem;
-        margin: 0rem 1rem 5rem 1rem;
-        border-radius: 0.5rem;
-        line-height: 1.5;
-        .coinSecondInformation_p{
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            @media (max-width: 576px){
-                font-size: 1.2rem;
             }
         }
     }

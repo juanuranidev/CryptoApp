@@ -1,0 +1,30 @@
+.coinDetailText{
+    background-color: #0B0E11;
+    padding: 1rem;
+    margin: 0rem 1rem;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    .coinDetailText_p{
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        @media (max-width: 992px){
+            font-size: 1.2rem;
+        }
+        @media (max-width: 576px){
+            font-size: 1rem;
+        }
+    }
+    .coinDetailText_div{
+        .coinDetailText_div_a{
+            font-size: 2.5rem;
+            text-decoration: none;
+            margin: 0rem 1rem;
+            text-align: center;
+            width: 100%;
+            span:active{
+                transition: all 0.1s ease-in-out;
+                transform: scale(.95);
+            }
+        }
+    }
+}

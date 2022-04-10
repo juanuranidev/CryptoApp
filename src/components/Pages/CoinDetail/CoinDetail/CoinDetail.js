@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import parse from 'html-react-parser';
 import WatchlistContext from '../../../Context/WatchlistContext';
 import BackButton from '../../../BackButton/BackButton';
+import CoinDetailText from './CoinDetailText/CoinDetailText';
 import './CoinDetail.scss';
+import CoinDetailChart from './CoinDetailChart/CoinDetailChart';
 
 const CoinDetail = ({coin}) => {
   const {watchlist, addCoinToWatchlist, deleteCoinFromWatchlist} = useContext(WatchlistContext)
@@ -61,10 +62,8 @@ const CoinDetail = ({coin}) => {
           </div>
         </div>
       </div>
-      <div className="coinSecondInformation">
-        {coin.description.en && <p className="coinSecondInformation_p">{parse(coin.description.en)}</p>}
-        <p className="coinSecondInformation_p">{coin.name} page:  <span><a href={coin.links.homepage[0]} target="_blank">Homepage</a></span></p>
-      </div>    
+      <CoinDetailChart id={coin.id} />
+      <CoinDetailText description={coin.description.en} links={coin.links}/>
     </div>)
 }
 

@@ -14,8 +14,8 @@ const CoinDetailContainer = () => {
       .then(coin => setCoin(coin))
       .catch(error => console.log(error))
       .finally(() => setLoading(false))
-  }, [])
-  
+  }, [id])
+
   return (
     <>
       {loading

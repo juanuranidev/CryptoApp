@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './_BackButton.scss';
+import './BackButton.scss';
 
 const BackButton = () => {
   return(

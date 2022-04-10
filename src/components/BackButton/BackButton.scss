@@ -1,18 +1,20 @@
 .backButton{
     display: flex;
-    margin: 5rem 0rem 2rem 2rem;
+    margin: 0rem 0rem 2rem 2rem;
     .backButton_a{
         .backButton_a_button{
             color: #181A20;
             font-size: 1rem;
             font-weight: 700;
+            border: none;
             background-color: #FCD535;
             padding: 0.6rem 1.8rem;
             border-radius: 0.5rem;
             cursor: pointer;
         }
         .backButton_a_button:active{
-            transform: scale(0.96);
+            transition: all 0.1s ease-in-out;
+            transform: scale(0.95);
         }
     }
 }
