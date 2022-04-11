@@ -1,21 +1,27 @@
 # Cryptoapp
-Crypto page that allows you to see the price of the 100 cryptocurrencies with the highest market capitalization at the moment. You can also save your favorite cryptocurrencies in a watchlist.
+Cryptocurrency page that allows you to see the price of the 250 cryptocurrencies with the largest market capitalization at the moment. You can also save your favorite cryptocurrencies in a watchlist and view their price history in different timeframes.
 
 # Demo
 https://cryptohunterapp.netlify.app/
 
 # Main Technologies
-<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react"><br>
-<img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React_Router"><br>
-<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" alt="SASS"><br>
-<img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="netlify">
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)<br>
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)<br>
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)<br>
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)<br>
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
 # Features
-Click on the image of a cryptocurrency to go to its page<br>
-Add a cryptocurrency to the watchlist<br>
-Search for a cryptocurrency
+Click on a cryptocurrency to go to its page<br>
+Add a cryptocurrency to your watchlist<br>
+Search for a cryptocurrency<br>
+See the history of its price in different timeframes
 
 # Libraries
+**React for creating a modern web app 17.0.2**<br>
+npx create-react-app my-app<br>
+https://create-react-app.dev/
+
 **React Router Dom for routing 6.2.1**<br>
 npm install react-router-dom@6<br>
 https://reactrouter.com/
@@ -24,9 +30,13 @@ https://reactrouter.com/
 npm install sass<br>
 https://create-react-app.dev/docs/adding-a-sass-stylesheet/
 
-**html-react-parser 1.4.5**<br>
+**html-react-parser to convert text to html 1.4.5**<br>
 npm install html-react-parser --save<br>
 https://www.npmjs.com/package/html-react-parser
+
+**react-chartjs-2 for charts 1.4.5**<br>
+npm install --save chart.js react-chartjs-2<br>
+https://react-chartjs-2.js.org/
 
 # Data
 API data from https://www.coingecko.com/es/api/documentation

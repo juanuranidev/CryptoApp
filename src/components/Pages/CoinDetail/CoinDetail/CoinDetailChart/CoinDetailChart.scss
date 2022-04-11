@@ -1,0 +1,33 @@
+.coinDetailChart{ 
+    width: 80%;
+    margin: 0rem auto 5rem auto;
+    @media(max-width: 992px){
+        width: 90%;
+    }
+    @media(max-width: 576px){
+        display: none;
+    }
+    .coinDetailChart_div{
+        padding: 1rem;
+        .coinDetailChart_div_button{
+            font-size: 1rem;
+            margin: 0rem 0.5rem;
+            background-color: #181A20;
+            border: 0.1rem solid #FCD535;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 0.25rem;
+            width: 6rem;
+            padding: 0.5rem 0rem;
+            cursor: pointer;
+        }
+        .coinDetailChart_div_button:active{
+            transform: scale(.95);
+            transition: all 0.1s ease-in-out;
+        }
+        .active{
+            background-color: #FCD535;
+            color: #000000;
+        }
+    }
+}
